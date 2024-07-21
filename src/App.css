@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  background-color: #282c34;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* MainSection Styles */
+.main-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-image: linear-gradient(transparent, transparent),
+                    url('path-to-your-grid-image.png');  */
+                    /* Add your grid background image path here */
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.3; /* Adjust the opacity to make the grid lines visible but not too overpowering */
+}
+
+.main-section h1, .main-section h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.author {
+  background-color: #ff6347;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.coming-soon-btn {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.coming-soon-btn i {
+  background-color: #fff;
+  color: #0056b3;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.coming-soon-btn:hover {
+  background-color: #004494;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.images img {
+  margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  transform: rotate(-10deg);
+  transition: transform 0.3s;
+}
+
+.images img:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+
+/* StatsSection.css */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  flex-wrap: wrap;
+}
+
+.stats-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  /* background: linear-gradient(90deg, #ff00ea, #00ff00); */
+}
+
+.stats-card h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 0;
+  padding-right: 30px;
+}
+
+.stats-card .subtitle {
+  font-size: 12px;
+}
+
+.stats-card p {
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+.add-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: black;
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-card {
+    width: 100%;
+    padding: 10px; /* Adjusted padding for very small screens */
+  }
+
+  .stats-card h2 {
+    font-size: 16px; /* Increased font size for readability */
+  }
+
+  .stats-card p {
+    font-size: 28px;
+  }
+
+  .add-button {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+  }
+}
+
+
+/* GlobeSection Styles */
+
+.globe-section {
+  height: 100vh; /* Full height */
+  background-image: url('./assets/globe.png'); /* Replace with the actual path */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+.globe-content {
+  color: #fff; /* Adjust text color if needed */
+  text-align: center;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .globe-section {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .globe-content h1 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .globe-content p {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .globe-section {
+    padding: 5px; /* Further reduce padding for very small screens */
+  }
+
+  .globe-content h1 {
+    font-size: 1.2em; /* Further adjust font size for very small screens */
+  }
+
+  .globe-content p {
+    font-size: 0.9em; /* Further adjust font size for very small screens */
+  }
+}
+/* CardsSection Styles */
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #1c1c1c;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 1 300px;
+  max-width: 30%;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: inherit;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #000;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-nodes {
+  background-color: #8080ff;
+}
+
+.orchestrators {
+  background-color: #ff99cc;
+}
+
+.validators {
+  background-color: #99ffcc;
+}
+
+.deploy-btn {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin-left: auto;
+}
+
+.arrow-white-circle {
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.coming-soon-btn {
+  background-color: #0056b3; /* Default button background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 1em; /* Adjust font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  border-radius: 20px;
+  position: relative; /* Required for positioning the tooltip */
+}
+
+.coming-soon-btn i {
+  background-color: #fff; /* White background for the icon */
+  color: #0056b3; /* Blue color for the arrow */
+  border-radius: 50%; /* Round shape for the icon */
+  padding: 5px; /* Add some space around the icon */
+  margin-left: 10px; /* Space between text and icon */
+}
+
+.coming-soon-btn:hover {
+  background-color: #004494; /* Darker blue on hover */
+}
+
+/* Tooltip styling */
+.tooltip {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.coming-soon-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.content-nodes, .orchestrators, .validators {
+  position: relative;
+}
+
+.content-nodes::after, .orchestrators::after, .validators::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 15px 15px;
+  pointer-events: none;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.footer-content {
+  padding: 20% 20%;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+}
+
+.footer p {
+  line-height: 1.6;
+}
